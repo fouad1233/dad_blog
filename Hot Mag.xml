@@ -3909,41 +3909,33 @@ $(&quot;.tabs-1&quot;).mtabs();
 <div class='container-wrapper'>
 <nav id='main-nav'>
  
-<div class='main-menu'><ul class='menu' id='menu-main'>
-<li><a class='active' expr:href='data:blog.homepageUrl'>الصفحة الرئيسية</a></li>
-<li><a href='#'>&#8801; قائمة</a>
-<ul class='sub-menu'>
- <li><a href='#'>العاب</a></li>
- <li><a href='#'>اندرويد</a></li>
- <li><a href='#'>تطبيقات</a></li>
- <li><a href='#'>برامج</a></li>
-</ul>
-</li>
- <li><a href='#'>العمل الحر</a>
-</li>
-<li><a href='#'>&#8801; قائمة</a>
-<ul class='sub-menu'>
- <li><a href='#'>العاب</a></li>
- <li><a href='#'>اندرويد</a></li>
- <li><a href='#'>تطبيقات</a></li>
-</ul>
-</li>
-<li><a href='#'>برامج</a></li>
-<li><a href='#'>ألعاب</a></li>
-<li><a href='#'>تطبيقات</a></li>  
+<b:section class='main-menu-section' id='main-menu-sec' maxwidgets='1' showaddelement='no'>
+  <b:widget id='LinkList2' locked='false' title='🔗 القائمة الرئيسية (اضغط هنا لتعديل الروابط)' type='LinkList'>
+    <b:includable id='main'>
+      <div class='main-menu'>
+        <ul class='menu' id='menu-main'>
+          <li><a class='active' expr:href='data:blog.homepageUrl'>الصفحة الرئيسية</a></li>
+          
+          <!-- Editable Links from Blogger Layout -->
+          <b:loop values='data:links' var='link'>
+            <li><a expr:href='data:link.target'><data:link.name/></a></li>
+          </b:loop>
 
-<li class='search-box'>
-					<div class='top-icon fa fa-search' href='#'><span class='visuallyhidden'>البحث</span></div>
-					
-					<div class='search'>
-					<form action='/search' method='get'>
-						<input class='query' name='q' placeholder='للبحث, اكتب كلمة و اضغط إنتر.' type='text' value=''/>
-					</form>
-					</div> <!-- .search -->
-				</li>
-<li class='ranpost'><a onclick='feelingLucky();'><i class='fa fa-random'/></a></li>
-</ul>
-</div> 
+          <li class='search-box'>
+            <div class='top-icon fa fa-search' href='#'><span class='visuallyhidden'>البحث</span></div>
+            
+            <div class='search'>
+            <form action='/search' method='get'>
+              <input class='query' name='q' placeholder='للبحث, اكتب كلمة و اضغط إنتر.' type='text' value=''/>
+            </form>
+            </div> <!-- .search -->
+          </li>
+          <li class='ranpost'><a onclick='feelingLucky();'><i class='fa fa-random'/></a></li>
+        </ul>
+      </div> 
+    </b:includable>
+  </b:widget>
+</b:section>
 </nav> 
 
 
